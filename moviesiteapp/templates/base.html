@@ -1,0 +1,46 @@
+{% block head %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Movies Website</title> 
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+</head>
+{% endblock %}
+{% block body %}
+<!-- css style here -->
+<style>
+    body {
+        background:black;
+        font-family: 'Roboto Mono', monospace;
+    }
+</style>
+<section class="section">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-offset-4 is-4">
+                <form method="POST">
+                    <div class="field has-addons">
+                        <div class="control is-expanded">
+                            <input class="input" name="movie_name" type="text" placeholder="Movie Name">
+                        </div>
+                        <div class="control">
+                            <button class="button is-info">
+                                Search
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+{% endblock %}
+{% block content %}
+<div class="container">
+{% block page_content %}{% endblock %}
+</div>
+{% endblock %}
+
+
