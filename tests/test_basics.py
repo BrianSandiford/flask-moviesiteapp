@@ -1,6 +1,5 @@
 import unittest
 from flask import current_app
-#from moviesiteapp import app
 from moviesiteapp import create_app
 
 class BasicsTestCase(unittest.TestCase):

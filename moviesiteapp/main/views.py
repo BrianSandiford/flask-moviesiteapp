@@ -1,7 +1,17 @@
 import os
 import requests
-from flask import render_template, session, redirect, url_for, current_app, request
+from flask import render_template, session, redirect, url_for, current_app, request, abort
 from . import main
+
+@main.route('/shutdown')
+def server_shutdown():
+  if not current_app.testing:
+     abort(404)
+  shutdown = request.environ.get('werkzeug.server.shutdown')
+  if not shutdown:
+     abort(500)
+  shutdown()
+  return 'Shutting down...'
 
 @main.route('/', methods=['GET', 'POST'])
 def index():
