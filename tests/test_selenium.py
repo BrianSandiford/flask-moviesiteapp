@@ -10,9 +10,11 @@ class SeleniumTestCase(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        # start Firefox
+        # start Chrome
+        options = webdriver.ChromeOptions()
+        options.add_argument('headless')
         try:
-            cls.client = webdriver.Chrome()
+            cls.client = webdriver.Chrome(chrome_options=options)
         except:
             pass
 
