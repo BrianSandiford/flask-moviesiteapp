@@ -10,7 +10,7 @@ importlib-resources==5.2.0
 itsdangerous==2.0.1
 Jinja2==3.0.1
 MarkupSafe==2.0.1
-pkg-resources==0.0.0
+# pkg-resources==0.0.0
 python-dotenv==0.18.0
 requests==2.26.0
 selenium==3.141.0
