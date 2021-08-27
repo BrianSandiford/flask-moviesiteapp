@@ -19,5 +19,5 @@ echo '##### Run Test #####'
 python3 manage.py test
 
 echo '#### deactivate virtual environment ###'
-deactivate 
+#deactivate 
 exit
